@@ -1,12 +1,16 @@
-import {cn} from "@/lib/utils"
-import {Button} from "@/components/ui/button"
-import {Input} from "@/components/ui/input"
-import {Label} from "@/components/ui/label"
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+export type Props = {
+    className?: string
+}
 
 export function LoginForm({
-                              className,
-                              ...props
-                          }) {
+    className,
+    ...props
+}: Props) {
     return (
         <form className={cn("flex flex-col gap-6", className)} {...props}>
             <div className="flex flex-col items-center gap-2 text-center">
@@ -18,7 +22,7 @@ export function LoginForm({
             <div className="grid gap-6">
                 <div className="grid gap-2">
                     <Label htmlFor="username">Username</Label>
-                    <Input className="placeholder:text-sm" id="username" type="text" placeholder="username" required/>
+                    <Input className="placeholder:text-sm" id="username" type="text" placeholder="username" required />
                 </div>
                 <div className="grid gap-2">
                     <div className="flex items-center">
@@ -31,7 +35,7 @@ export function LoginForm({
                         </a>
                     </div>
                     <Input className="placeholder:text-sm" id="password" type="password"
-                           placeholder="Enter your password" required/>
+                        placeholder="Enter your password" required />
                 </div>
                 <Button type="submit" className="w-full">
                     Login

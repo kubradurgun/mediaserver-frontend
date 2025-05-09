@@ -1,4 +1,15 @@
-export const movies = [
+export type Movie = {
+    id: number;
+    title: string;
+    poster: string;
+    genres: string[];
+    imdb: number;
+    releaseDate: string;
+    description: string;
+    kaan?: boolean
+}
+
+export const movies: Movie[] = [
     {
         id: 1,
         title: "A Working Man",
@@ -71,7 +82,6 @@ export const movies = [
         releaseDate: "28.03.2025",
         description: "Chuck Dixon'ın 2014 yılında yayımlanan Levon's Trade adlı romanından uyarlanmıştır. Levon Cade, eski bir Kraliyet Deniz Komandosu'dur ve artık inşaat işçisi olarak sakin bir yaşam sürmektedir. Ancak patronunun genç kızı Jenny'nin insan kaçakçıları tarafından kaçırılmasıyla birlikte, Levon eski yeteneklerini kullanmak zorunda kalır. Jenny'yi bulmak için çıktığı bu yolculuk, onu büyük bir yolsuzluk ve hükümet ajanlarının insan kaçakçılığına karıştığı bir komploya götürür."
     },
-    ,
     {
         id: 9,
         title: "Oppenheimer",
@@ -90,4 +100,4 @@ export const movies = [
         releaseDate: "25.04.2025",
         description: "Bu fantastik macera, aynı adı taşıyan George R.R. Martin öykülerinden uyarlanmıştır. Filmin yönetmeni Paul W.S. Anderson’dır. Bir büyücü, Kayıp Diyarlar’a doğru yolculuk eder. Amacı, bir kişinin kurt adam dönüşümüne olanak tanıyan sihirli bir gücü bulmaktır. Bu mistik hikâye, iyilik ve kötülük, borç ve tatmin, aşk ve kayıp gibi temaları keşfeder. Büyü ve yaratıklarla dolu bu dünyada, büyücü Alys ve rehberi, gezgin Boyce, insanlar ve iblislerle mücadele ederken zorlu bir yolculuğa çıkarlar. Büyülü bir dünyada gerilim ve macera dolu bir yolculuğa katılın."
     }
-];
+]

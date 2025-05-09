@@ -1,4 +1,14 @@
-export const series = [
+export type Series = {
+    id: number;
+    title: string;
+    poster: string;
+    genres: string[];
+    imdb: number;
+    releaseDate: string;
+    description: string;
+}
+
+export const series: Series[] = [
     {
         id: 1,
         title: "The Last of Us",

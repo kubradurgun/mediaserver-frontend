@@ -16,7 +16,6 @@ const page = () => {
                 }
                 rating={8.6}
             />
-
         </main>
     )
 }

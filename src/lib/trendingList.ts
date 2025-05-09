@@ -1,4 +1,17 @@
-export const trendingList = [
+export type TrendingList = {
+    id: number;
+    title: string;
+    poster: string;
+    age: number;
+    imdb: number;
+    releaseDate: string;
+    description: string;
+    type: string;
+    rating: number;
+    tags: string[];
+}
+
+export const trendingList: TrendingList[] = [
     {
         "id": 1,
         "title": "Oppenheimer",
