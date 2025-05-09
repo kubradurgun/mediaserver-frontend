@@ -62,7 +62,7 @@ const Hero = () => {
                 <Icon
                     icon="lineicons:scroll-down-2" width="35"/>
             </a>
-            <CarouselContent className="">
+            <CarouselContent>
                 {trendingList.map((trend, index) => (
                     <CarouselItem key={index}>
                         {/*-------*/}
@@ -70,19 +70,22 @@ const Hero = () => {
                             <Link href={`/${trend.type}/${trend.id}`}>
                                 <img className="opacity-20 size-full object-cover" src={trend.poster}
                                      alt="Banner-Image"/>
-                                <div className="absolute inset-0 flex">
-                                    <div className="flex justify-center gap-2 flex-col bg-background/50 p-6">
-                                        <img className="object-contain flex-1 max-h-[calc(100%-3rem)] rounded-md"
-                                             src={trend.poster} alt=""/>
+                                <div className="absolute inset-0 flex sm:flex-row flex-col backdrop-blur-sm ">
+                                    <div
+                                        className="flex justify-center gap-2 flex-col bg-background/50 sm:p-6 h-1/2 sm:h-auto">
+                                        <img
+                                            className="object-contain flex-1 max-h-[calc(100%-3rem)] rounded-md"
+                                            src={trend.poster} alt=""/>
                                     </div>
-                                    <div className="flex flex-col flex-1 p-6 gap-5 justify-center">
+                                    <div className="flex flex-col flex-1 p-6 sm:gap-5 gap-2 justify-center">
                                         <div className="flex flex-col gap-2">
-                                            <h1 className="text-4xl font-bold">{trend.title}</h1>
+                                            <h1 className="sm:text-4xl text-2xl font-bold">{trend.title}</h1>
                                             <div className="flex gap-2 items-center">
-                                                <div className="p-1 border border-foreground">
+                                                <div
+                                                    className="py-0.5 px-1 border text-sm sm:text-base border-foreground">
                                                     {trend.age}+
                                                 </div>
-                                                <span>{trend.tags.join(", ")}</span>
+                                                <span className="text-sm sm:text-base">{trend.tags.join(", ")}</span>
                                             </div>
                                         </div>
                                         <div className="flex gap-1 items-center">
@@ -91,8 +94,8 @@ const Hero = () => {
                                             <span>{trend.rating}</span>
                                         </div>
                                         <div className="flex flex-col gap-2">
-                                            <h2 className="text-2xl">Summary</h2>
-                                            <p>{trend.description}</p>
+                                            <h2 className="sm:text-2xl text-base">Summary</h2>
+                                            <p className="sm:text-base text-sm">{trend.description}</p>
                                         </div>
 
                                     </div>
